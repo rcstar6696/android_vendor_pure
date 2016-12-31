@@ -4,3 +4,12 @@ add_lunch_combo dragon-user
 add_lunch_combo marlin-user
 add_lunch_combo sailfish-user
 add_lunch_combo shamu-user
+add_lunch_combo angler-userdebug
+add_lunch_combo bullhead-userdebug
+add_lunch_combo dragon-userdebug
+add_lunch_combo marlin-userdebug
+add_lunch_combo sailfish-userdebug
+add_lunch_combo shamu-userdebug
+
+add_lunch_combo sirius-userdebug
+add_lunch_combo castor_windy-userdebug

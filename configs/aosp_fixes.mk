@@ -23,10 +23,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
-    ro.setupwizard.rotation_locked=true
+    ro.setupwizard.rotation_locked=true \
+    ro.opa.eligible_device=true
+
+# Proprietary latinime libs needed for Keyboard swyping
+ifneq ($(filter shamu,sirius,castor_windy,$(TARGET_PRODUCT)),)
+PRODUCT_COPY_FILES += \
+    vendor/pure/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+else
+PRODUCT_COPY_FILES += \
+    vendor/pure/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+endif
 
 # Camera Effects for devices without a vendor partition
-ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
+ifneq ($(filter shamu,sirius,castor_windy,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES +=  \
     vendor/pure/prebuilt/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
     vendor/pure/prebuilt/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd

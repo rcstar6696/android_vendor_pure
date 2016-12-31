@@ -17,7 +17,7 @@ ifndef PURE_BUILD_TYPE
     PURE_BUILD_TYPE := UNOFFICIAL
 endif
 
-PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(PURE_BUILD_TYPE)
+PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(PURE_BUILD_TYPE) -Rcstar6696
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.pure.version=$(PURE_VERSION)

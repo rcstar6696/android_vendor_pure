@@ -17,3 +17,6 @@ include vendor/pure/configs/bootanimation.mk
 include vendor/pure/configs/pure_main.mk
 include vendor/pure/configs/system_additions.mk
 include vendor/pure/configs/version.mk
+
+# Pull in Prebuilt applications for phones
+$(call inherit-product-if-exists, vendor/prebuilt/prebuilt.mk)

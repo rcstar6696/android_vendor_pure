@@ -27,6 +27,7 @@ endif
 # Main Required Packages
 PRODUCT_PACKAGES += \
     Launcher3 \
+    Camera2 \
     LiveWallpapersPicker
 
 # Include explicitly to work around Facelock issues

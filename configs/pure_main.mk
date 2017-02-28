@@ -25,11 +25,12 @@ ifeq ($(PURE_BUILD_TYPE),OFFICIAL)
 endif
 
 # Main Required Packages
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES := \
     Launcher3 \
     Camera2 \
+    LatinIME \
     LiveWallpapersPicker
-
+    
 # Include explicitly to work around Facelock issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full
